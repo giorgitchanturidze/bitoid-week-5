@@ -1,17 +1,32 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="output.css" rel="stylesheet">
 </head>
+
 <body>
-    <nav class="flex items-center justify-between flex-wrap rounded-bl-lg bg-violet p-12"></nav>
-  <h1 class="text-3xl ">
-    Hello world!
-  </h1>
+  <div class="">
+    <nav class="flex rounded-bl-full bg-violet p-12"></nav>
+    <div class="overflow-hidden absolute opacity-10 top-1 ">
+      <div class="right-0 inline-block">
+        <div class=" h-20 w-20 mix-blend-normal rounded-xl bg-white rotate-45 transform origin-bottom-left"></div>
+      </div>
+
+      <div class="inline-block">
+        <div class=" h-20 w-20 mix-blend-normal rounded-xl bg-white -rotate-45 transform origin-top-left"></div>
+      </div>
+
+      <div class="inline-block ">
+        <div class=" w-20 h-20 mix-blend-normal rounded-xl bg-white -rotate-45 transform origin-top-right"></div>
+      </div>
+    </div>
+  </div>
   <button class="bg-violet hover:bg-light_violet text-white py-2 px-4 rounded">Button</button>
   <button class="bg-light_grey-200 hover:bg-light_grey-100 text-white py-2 px-4 rounded">Button</button>
   <button class="bg-dark hover:bg-light_dark text-white py-2 px-4 rounded">Button</button>
   <button class="bg-gray hover:bg-dark_grey text-white py-2 px-4 rounded">Button</button>
-  </html>
+
+</html>
