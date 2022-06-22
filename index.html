@@ -5,28 +5,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="output.css" rel="stylesheet">
+  <script defer src="app.js">
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+
 </head>
 
-<body>
-  <div class="">
-    <nav class="flex rounded-bl-full bg-violet p-12"></nav>
-    <div class="overflow-hidden absolute opacity-10 top-1 ">
-      <div class="right-0 inline-block">
-        <div class=" h-20 w-20 mix-blend-normal rounded-xl bg-white rotate-45 transform origin-bottom-left"></div>
-      </div>
+<body class="bg-light_grey-50 dark:bg-very_dark">
+  <div class="relative">
+    <nav class="flex rounded-bl-full bg-violet p-12">
+      <h1 class="text-white ">Devjobs</h1>
+      <button id="theme-toggle" type="button"
+        class="absolute bottom-3 right-2 text-white dark:text-white hover:bg-light_violet dark:hover:bg-gray focus:outline-none focus:ring-0 focus:ring-light_violet dark:focus:ring-gray rounded-lg text-sm p-2.5">
+        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd" clip-rule="evenodd"></path>
+        </svg>
+      </button>
 
-      <div class="inline-block">
-        <div class=" h-20 w-20 mix-blend-normal rounded-xl bg-white -rotate-45 transform origin-top-left"></div>
-      </div>
+      <form>
+        <label for="default-search"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
+        <div class="absolute inset-x-0 w-2/4 md:w-3/5 mx-auto -mt-1 bottom-0">
+          <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <input type="search" id="default-search"
+            class="block p-4 pl-10 w-full text-sm text-very_dark bg-white rounded-lg border border-white focus:ring-blue-500 focus:border-blue-500 dark:bg-dark dark:border-dark dark:placeholder-gray dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Search Mockups, Logos..." required="">
+            <!-- search sections -->
+          <input type="sarch" id="location-search"
+            class="bg-violet hover:bg-light_violet text-white absolute inset-y-0 inset-x-80 items-center pl-3 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-violet dark:hover:bg-light_violet">
+          <input type="sarch" id="location-search"
+            class="bg-violet hover:bg-light_violet text-white absolute inset-y-0 inset-2/4 items-center pl-3 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-violet dark:hover:bg-light_violet">
+          <button type="submit"
+            class="bg-violet hover:bg-light_violet text-white absolute right-2.5 bottom-2.5  focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-violet dark:hover:bg-light_violet">Search</button>
+        </div>
+      </form>
 
-      <div class="inline-block ">
-        <div class=" w-20 h-20 mix-blend-normal rounded-xl bg-white -rotate-45 transform origin-top-right"></div>
-      </div>
-    </div>
+    </nav>
   </div>
   <button class="bg-violet hover:bg-light_violet text-white py-2 px-4 rounded">Button</button>
   <button class="bg-light_grey-200 hover:bg-light_grey-100 text-white py-2 px-4 rounded">Button</button>
   <button class="bg-dark hover:bg-light_dark text-white py-2 px-4 rounded">Button</button>
   <button class="bg-gray hover:bg-dark_grey text-white py-2 px-4 rounded">Button</button>
+</body>
 
 </html>
