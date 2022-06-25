@@ -23,10 +23,12 @@
     <!-- navbar -->
     <nav class="flex rounded-bl-full bg-violet p-12">
       <!-- h1 -->
-      <h1 class="text-white text-2xl">Devjobs</h1>
+      <div class="text-white dark:text-midnight text-2xl font-bold ">
+        <h1 >Devjobs</h1>
+      </div>
       <!-- Dark/light mode -->
       <button id="theme-toggle" type="button"
-        class="absolute bottom-3 right-20 text-white dark:text-white hover:bg-light_violet dark:hover:bg-gray focus:outline-none focus:ring-0 focus:ring-light_violet dark:focus:ring-gray rounded-lg text-sm p-2.5">
+        class="absolute bottom-3 right-20 text-white dark:text-midnight hover:bg-light_violet dark:hover:bg-light_violet focus:outline-none focus:ring-0 focus:ring-light_violet dark:focus:ring-gray rounded-lg text-sm p-2.5">
         <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg">
           <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -57,7 +59,7 @@
             </svg>
           </div>
           <input type="search"
-            class="block p-4 pl-10 w-full text-sm rounded-l-lg border text-very_dark bg-white border-white focus:ring-blue-500 focus:border-blue-500 dark:bg-dark dark:border-dark dark:placeholder-grey dark:text-white"
+            class="block p-4 pl-10 w-full text-sm rounded-l-lg border text-very_dark bg-white border-white focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-dark dark:border-dark dark:placeholder-grey dark:text-white"
             placeholder="Enter desired job..." required="">
         </div>
         <!-- Location -->
@@ -72,7 +74,7 @@
             </svg>
           </div>
           <input type="search" id="default-search"
-            class="block p-4 pl-10 w-full text-sm border text-very_dark bg-white border-white  focus:ring-blue-500 focus:border-blue-500 dark:bg-dark dark:border-dark dark:placeholder-grey dark:text-white"
+            class="block p-4 pl-10 w-full text-sm border text-very_dark bg-white border-white focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-dark dark:border-dark dark:placeholder-grey dark:text-white"
             placeholder="Filter by location..." required="">
         </div>
         <!-- checkbox -->
@@ -81,10 +83,10 @@
         <div class="relative">
           <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
             <input id="default-checkbox" type="checkbox" value=""
-              class="w-4 h-4 accent-violet  text-violet bg-gray-100 rounded border-violet focus:ring-violet dark:focus:ring-violet dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              class="w-4 h-4 accent-violet  text-violet bg-gray-100 rounded border-violet focus:outline-none focus:ring-violet dark:focus:ring-violet dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
           </div>
           <label for="default-checkbox"
-            class="block p-4 pl-10 rounded-r-lg text-sm border text-very_dark bg-white border-white focus:ring-blue-500 focus:border-blue-500 dark:bg-dark dark:border-dark dark:placeholder-grey dark:text-white"">Full Time Only</label>
+            class="block p-4 pl-10 rounded-r-lg text-sm border text-very_dark bg-white border-white focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-dark dark:border-dark dark:placeholder-grey dark:text-white"">Full Time Only</label>
             <button type=" submit"
             class="bg-violet hover:bg-light_violet text-white absolute right-2.5 bottom-2.5  focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-violet dark:hover:bg-light_violet">Search</button>
         </div>

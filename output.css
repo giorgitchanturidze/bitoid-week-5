@@ -1490,6 +1490,11 @@ html {
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
+.dark .dark\:text-midnight {
+  --tw-text-opacity: 1;
+  color: rgb(18 23 33 / var(--tw-text-opacity));
+}
+
 .dark .dark\:placeholder-grey::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(157 174 194 / var(--tw-placeholder-opacity));
@@ -1517,6 +1522,11 @@ html {
 .dark .dark\:hover\:bg-light_violet:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(147 155 244 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:hover\:bg-grey:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(157 174 194 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:focus\:ring-blue-600:focus {
